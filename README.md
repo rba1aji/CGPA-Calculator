@@ -1,8 +1,7 @@
-# CGPA-Calculator
-for engineering students
-My OOPs teacher told to do a mini project so I just did this.
-////////////////////////
-Concepts Used:
--★ Class
--★ Array of Objects
--★
+## CGPA-Calculator
+A calculator tool to find CGPA (Cumulative Grade Point Average) of individual engineering students.<br/>
+<br/>My OOPs teacher told to do a mini project with C++ and I just did this.
+<br/>
+>**Concepts Used:**
+* Class
+* Array of Objects
