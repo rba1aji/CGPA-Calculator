@@ -1,6 +1,11 @@
+/*********--HEADER-FILES--*********/
+
 #include<iostream>
 #include<string>
 using namespace std;
+
+/*************--CLASS--************/
+
 class CGPA{
 	int nsub;
 	int c[10],g[10];
@@ -8,6 +13,7 @@ class CGPA{
 	int sum_cg=0;
 	float credits=0;
 	float sgpa=0;
+	
 	public:
 	void read();
 	void grad_to_point();
@@ -17,6 +23,7 @@ class CGPA{
 	int sumq();
 };
 
+/********--CLASS-METHODS--*********/
 
 	void CGPA::read(){
 		cin>>nsub;
@@ -42,10 +49,10 @@ class CGPA{
 	
 	void CGPA::display_sgpa(){
 		if(sgpa>10){
-			cout<<"Oops... Something you have entered wrongly...";
+			cout<<"Oops... Something went wrong...";
 		}
 		else{
-			cout<<"SGPA = "<<sgpa;
+			cout<<sgpa;
 		}
 	}
 	
@@ -55,29 +62,51 @@ class CGPA{
 	int CGPA::sumq(){
 		return credits;
 	}
-	
+
+/********--MAIN-FUNCTION--*********/
 	
 int main(){
+	
 	cout<<"\t\t----- CGPA CALCULATOR -----\t\t\n\n";
+	
 	CGPA x[8];
+	
 	int n;
 	cout<<"How many Semesters completed? ";
 	cin>>n;
+	
 	for(int i=0;i<n;i++){
-		cout<<endl<<"Enter the number of subjects followed by Credits and the Grade you earned, in each subject of Semester "<<i+1<<""<<endl;
+		
+		cout<<endl<<"Enter the number of subjects followed by Credits and the Grade you earned, in each subject of Semester "<<i+1<<""<<endl<<endl;
+		
 		cout<<"No. of subjects in Sem "<<i+1<<": ";
+		
 		x[i].read();
+		
 		x[i].grad_to_point();
+		
 		x[i].calc();
+		
+		cout<<"  SGPA"<<i+1<<" => ";
 		x[i].display_sgpa();
+		
 		cout<<endl;
 	}
+	
 	float p=0,q=0;
+	
 	for(int i=0;i<n;i++){
 		p+=x[i].sump();
 		q+=x[i].sumq();
 	}
+	
 	float cgpa=p/q;
-	cout<<"\nCGPA = "<<cgpa<<endl;
+	
+	cout<<"\n-----------------------------------";
+	cout<<"\n   Your CGPA =>> "<<cgpa<<endl;
+	cout<<"-----------------------------------\n";
+	
 	return 0;
 }
+
+/********---END-OF-PROJECT--********/
