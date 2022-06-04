@@ -7,3 +7,6 @@ A calculator tool to find CGPA (Cumulative Grade Point Average) of individual en
 * Class
 * Class Methods
 * Array of Objects
+
+cgpa formula = avg of sgpa of each semester ;
+sgpa formula = sum of multiplication of each subject credit and 
