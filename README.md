@@ -1,12 +1,10 @@
 ## CGPA-Calculator
 A calculator tool to find CGPA (Cumulative Grade Point Average) of individual engineering students.<br/>
-<br/>My OOPs teacher told to do a mini project with C++ and I just did this.
-<br/>
->**Concepts Used:**
-* Loop
-* Class
-* Class Methods
-* Array of Objects
+<br/>I got tired of calculating my CGPA manually and developed this in CPP<br/>
+
+>**Input**
+* Grade of each course
+* Credit of each course
 
 cgpa formula = avg of sgpa of each semester ; <br>
 sgpa formula = (sum of multiplication of each subject credit and points of grade) % total no of subjects ;
